@@ -7,8 +7,8 @@
     <arg name="debug" default="false"/>
 
     <!-- World model and map config -->
-    <arg name="world" default="brsu"/>
-    <arg name="map_file" default="$(find gazebo_sim)/worlds/occupancy_grids/$(arg world).yaml" />
+    <arg name="world" default="brsu_ground_floor"/>
+    <arg name="map_file" default="$(find mas_environments)/clean_maps/$(arg world)/$(arg world).yaml" />
 
     <!-- Run the map server -->
     <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
